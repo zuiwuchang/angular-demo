@@ -1,0 +1,44 @@
+<!-- 保持頂部工具欄始終在屏幕最上方 -->
+<div class="layout-topbar" #toolbar>
+  <!-- 工具欄 -->
+  <p-toolbar>
+    <!-- p-toolbar-group-start 指定工具欄開始位置 -->
+    <div class="p-toolbar-group-start space5">
+
+      <a routerLink="/">
+        <p-button icon="pi pi-home" pTooltip="主頁"></p-button>
+      </a>
+
+      <p-button label="上傳" icon="pi pi-upload" styleClass="p-button-success" (onClick)="onClick('上傳')"></p-button>
+
+      <i class="p-toolbar-separator pi pi-bars" style="vertical-align: middle"></i>
+
+    </div>
+
+    <!-- p-toolbar-group-end 指定工具欄結束位置 -->
+    <div class="p-toolbar-group-end space5">
+      <a routerLink="/about">
+        <p-button icon="pi pi-info" pTooltip="關於"></p-button>
+      </a>
+    </div>
+  </p-toolbar>
+</div>
+
+<!-- 頁面正文 使用 margin-top 移動到工具欄下方 -->
+<div class="layout-context" [style.margin-top]="marginTop+'px'">
+  <router-outlet></router-outlet>
+</div>
+
+
+<!-- 在最下方顯示固定的頁腳內容 -->
+<footer class="layout-footer">
+  <div class="layout-footer-left">
+    PrimeNG Demo by <a href="https://book.king011.com/view/zh-Hant/view/google-angular2-PrimeNG/0"
+      target="_blank">King</a>
+  </div>
+  <div class="layout-footer-right">
+    <a href="https://github.com/zuiwuchang/angular-demo/primeng" target="_blank">
+      <button pButton type="button" icon="pi pi-github"></button>
+    </a>
+  </div>
+</footer>

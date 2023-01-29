@@ -1,0 +1,27 @@
+.context {
+    left: 8px;
+    right: 8px;
+}
+
+.layout-topbar {
+    @extend .context;
+    position: fixed;
+    top: 8px;
+    z-index: 1100;
+}
+
+.layout-context {
+    @extend .context;
+}
+
+.layout-footer {
+    @extend .context;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .layout-footer-right {
+        display: flex;
+    }
+}
