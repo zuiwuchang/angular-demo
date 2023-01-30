@@ -1,0 +1,15 @@
+<p>auto 表示只有在內容超出容器區域時才顯示滾動條</p>
+
+
+<div class="card">
+    <div class="line-height-3 card-container blue-container">
+        <div class="overflow-auto surface-overlay p-3 border-blue-500 border-2 border-round" style="height: 100px">
+            {{text}}
+        </div>
+    </div>
+</div>
+<span class="p-float-label">
+    <textarea inputId="textarea" autocapitalize="off" autocomplete="off" autocorrect="off" role="combobox" rows="5"
+        placeholder="" spellcheck="false" pInputTextarea [autoResize]="true" [(ngModel)]="text"></textarea>
+    <label for="textarea">編輯顯示文本</label>
+</span>

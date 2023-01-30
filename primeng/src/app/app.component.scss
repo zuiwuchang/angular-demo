@@ -18,10 +18,7 @@
     @extend .context;
     font-size: 1rem;
     display: flex;
+    margin-top: 8px;
     align-items: center;
     justify-content: space-between;
-
-    .layout-footer-right {
-        display: flex;
-    }
 }

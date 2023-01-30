@@ -5,7 +5,8 @@ import { PrimeflexRoutingModule } from './primeflex-routing.module';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+  ],
   imports: [
     CommonModule,
     PrimeflexRoutingModule

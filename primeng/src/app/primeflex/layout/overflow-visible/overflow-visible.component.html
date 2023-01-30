@@ -1,0 +1,15 @@
+<p>visible 表示溢出內容將在容器外被繼續顯示</p>
+
+
+<div class="card">
+    <div class="line-height-3 card-container blue-container">
+        <div class="overflow-visible surface-overlay p-3 border-blue-500 border-2 border-round" style="height: 100px">
+            {{text}}
+        </div>
+    </div>
+</div>
+<span class="p-float-label">
+    <textarea inputId="textarea" autocapitalize="off" autocomplete="off" autocorrect="off" role="combobox" rows="5"
+        placeholder="" spellcheck="false" pInputTextarea [autoResize]="true" [(ngModel)]="text"></textarea>
+    <label for="textarea">編輯顯示文本</label>
+</span>
