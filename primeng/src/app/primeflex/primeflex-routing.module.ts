@@ -14,6 +14,10 @@ const routes: Routes = [
     path: 'grid',
     loadChildren: () => import('./grid/grid.module').then(m => m.GridModule),
   },
+  {
+    path: 'background',
+    loadChildren: () => import('./background/background.module').then(m => m.BackgroundModule),
+  },
 ];
 
 @NgModule({
