@@ -1,0 +1,21 @@
+<p>可以嵌套 grid 來創建更複雜的佈局，這也是現代化 ui 架構(2023年) 推薦使用的佈局方案</p>
+<!-- 外層 -->
+<div class="grid">
+    <div class="col-8">
+        <!-- 嵌套 -->
+        <div class="grid">
+            <div class="col-6">
+                <div class="text-center p-3 border-round-sm bg-orange-500 font-bold text-white">6</div>
+            </div>
+            <div class="col-6">
+                <div class="text-center p-3 border-round-sm bg-orange-500 font-bold text-white">6</div>
+            </div>
+            <div class="col-12">
+                <div class="text-center p-3 border-round-sm bg-orange-500 font-bold text-white">12</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="text-center p-3 border-round-sm h-full bg-orange-500 font-bold text-white">4</div>
+    </div>
+</div>

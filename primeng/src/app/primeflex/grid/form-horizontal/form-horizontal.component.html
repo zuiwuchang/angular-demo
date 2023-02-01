@@ -1,0 +1,35 @@
+<p>你可以使用 grid 來將 標籤 和 input 設置到同行中，並且可以指定標籤寬度</p>
+
+<div class="field grid">
+    <label for="firstname3" class="col-fixed" style="width:100px">Firstname</label>
+    <div class="col">
+        <input id="firstname3" type="text"
+            class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary">
+    </div>
+</div>
+<div class="field grid">
+    <label for="lastname3" class="col-fixed" style="width:100px">Lastname</label>
+    <div class="col">
+        <input id="lastname3" type="text"
+            class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary">
+    </div>
+</div>
+
+
+<div class="card">
+    <h5>你也可以指定 標籤 和 input 佔用的寬度列數</h5>
+    <div class="field grid">
+        <label for="firstname4" class="col-12 mb-2 md:col-2 md:mb-0">Firstname</label>
+        <div class="col-12 md:col-10">
+            <input id="firstname4" type="text"
+                class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+    </div>
+    <div class="field grid">
+        <label for="lastname4" class="col-12 mb-2 md:col-2 md:mb-0">Lastname</label>
+        <div class="col-12 md:col-10">
+            <input id="lastname4" type="text"
+                class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+    </div>
+</div>

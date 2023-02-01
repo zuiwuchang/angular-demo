@@ -10,6 +10,10 @@ const routes: Routes = [
     path: 'flexbox',
     loadChildren: () => import('./flexbox/flexbox.module').then(m => m.FlexboxModule),
   },
+  {
+    path: 'grid',
+    loadChildren: () => import('./grid/grid.module').then(m => m.GridModule),
+  },
 ];
 
 @NgModule({
