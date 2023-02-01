@@ -18,6 +18,10 @@ const routes: Routes = [
     path: 'background',
     loadChildren: () => import('./background/background.module').then(m => m.BackgroundModule),
   },
+  {
+    path: 'border',
+    loadChildren: () => import('./border/border.module').then(m => m.BorderModule),
+  },
 ];
 
 @NgModule({
