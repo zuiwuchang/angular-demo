@@ -1,23 +1,25 @@
+<!-- 設置頁面主題 -->
+<link rel="stylesheet" [href]="theme">
+
 <!-- 保持頂部工具欄始終在屏幕最上方 -->
-<nav class="layout-topbar" #toolbar>
+<nav class="sticky top-0 z-5">
   <!-- 工具欄 -->
   <p-toolbar>
     <!-- p-toolbar-group-start 指定工具欄開始位置 -->
-    <div class="p-toolbar-group-start space5">
+    <div class="p-toolbar-group-start gap-2">
 
       <a routerLink="/">
         <p-button icon="pi pi-home" pTooltip="主頁"></p-button>
       </a>
       <a routerLink="/404">
-        <p-button icon="pi pi-times" label="錯誤路由" styleClass="p-button-danger"></p-button>
+        <p-button icon="pi pi-times" pTooltip="錯誤路由" styleClass="p-button-danger"></p-button>
       </a>
-
-
 
     </div>
 
     <!-- p-toolbar-group-end 指定工具欄結束位置 -->
-    <div class="p-toolbar-group-end space5">
+    <div class="p-toolbar-group-end gap-2">
+      <p-button icon="pi pi-cog" pTooltip="主題" (onClick)="themeSidebar=!themeSidebar"></p-button>
       <a routerLink="/about">
         <p-button icon="pi pi-info" pTooltip="關於"></p-button>
       </a>
@@ -26,20 +28,42 @@
 </nav>
 
 <!-- 頁面正文 使用 margin-top 移動到工具欄下方 -->
-<main class="layout-context" [style.margin-top]="marginTop+'px'">
-  <router-outlet></router-outlet>
-</main>
+<div class="sticky top-0">
+  <main>
+    <router-outlet></router-outlet>
+  </main>
 
 
-<!-- 在最下方顯示固定的頁腳內容 -->
-<footer class="layout-footer">
-  <div class="layout-footer-left">
-    PrimeNG Demo by <a href="https://book.king011.com/view/zh-Hant/view/google-angular2-PrimeNG/0"
-      target="_blank">King</a>
+  <!-- 在最下方顯示固定的頁腳內容 -->
+  <footer class="flex flex-row align-items-center pt-2">
+    <div class="flex flex-auto">
+      <span>
+        PrimeNG Demo by <a href="https://book.king011.com/view/zh-Hant/view/google-angular2-PrimeNG/0"
+          target="_blank">King</a></span>
+    </div>
+    <div class="flex">
+      <a href="https://github.com/zuiwuchang/angular-demo/primeng" target="_blank">
+        <button pButton type="button" icon="pi pi-github"></button>
+      </a>
+    </div>
+  </footer>
+</div>
+
+<!-- 主題菜單 -->
+<p-sidebar [(visible)]="themeSidebar" position="right" [style]="{width:'550px'}">
+  <div *ngFor="let theme of themes">
+    <h4>{{theme.title}}</h4>
+    <div class="grid">
+      <div *ngFor="let val of theme.values" class="col-3 flex flex-column gap-2">
+        <ng-container *ngIf="val.src">
+          <p-button class="flex justify-content-center" styleClass="p-button-link" (onClick)="onClickTheme(val.value)"
+            [ariaLabel]="val.value">
+            <img [src]="val.src" style="width: 58px;">
+          </p-button>
+
+          <div class="flex justify-content-center" style="font-size: 14px;">{{val.label}}</div>
+        </ng-container>
+      </div>
+    </div>
   </div>
-  <div class="layout-footer-right flex">
-    <a href="https://github.com/zuiwuchang/angular-demo/primeng" target="_blank">
-      <button pButton type="button" icon="pi pi-github"></button>
-    </a>
-  </div>
-</footer>
+</p-sidebar>

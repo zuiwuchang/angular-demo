@@ -1,24 +1,14 @@
-.context {
-    left: 8px;
-    right: 8px;
+.sticky {
+    // 設置一個邊距，用於防止頁面滾動條出現後滾動條遮擋了頁面右邊內容
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
 }
 
-.layout-topbar {
-    @extend .context;
-    position: fixed;
-    top: 8px;
-    z-index: 1100;
+img {
+    transition-duration: 100ms;
+    transition-timing-function: linear;
 }
 
-.layout-context {
-    @extend .context;
-}
-
-.layout-footer {
-    @extend .context;
-    font-size: 1rem;
-    display: flex;
-    margin-top: 8px;
-    align-items: center;
-    justify-content: space-between;
+img:hover {
+    transform: scale(1.1);
 }

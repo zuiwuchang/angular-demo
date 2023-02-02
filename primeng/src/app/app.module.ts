@@ -11,6 +11,7 @@ import { ButtonModule } from 'primeng/button';
 import { TooltipModule } from 'primeng/tooltip';
 import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
+import { SidebarModule } from 'primeng/sidebar';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './app/home/home.component';
@@ -21,13 +22,14 @@ import { NotfoundComponent } from './app/notfound/notfound.component';
     AppComponent,
     HomeComponent,
     AboutComponent,
-    NotfoundComponent
+    NotfoundComponent,
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule,
     RouterModule,
     AppRoutingModule,
     ToolbarModule, ButtonModule, TooltipModule, MessagesModule, MessageModule,
+    SidebarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -32,7 +32,7 @@
 // @import "node_modules/primeng/resources/themes/vela-orange/theme.css";
 // @import "node_modules/primeng/resources/themes/vela-purple/theme.css";
 // @import "node_modules/primeng/resources/themes/arya-blue/theme.css";
-@import "node_modules/primeng/resources/themes/arya-green/theme.css";
+// @import "node_modules/primeng/resources/themes/arya-green/theme.css";
 // @import "node_modules/primeng/resources/themes/arya-orange/theme.css";
 // @import "node_modules/primeng/resources/themes/arya-purple/theme.css";
 // @import "node_modules/primeng/resources/themes/nova/theme.css";
@@ -50,24 +50,14 @@
 
 /* 主題相關 */
 
-// 設置默認主題
+// 將主題變量設置到 body
 body {
     font-family: var(--font-family);
     background-color: var(--surface-ground);
     color: var(--text-color);
 }
 
+// 去掉 link button 的下劃線
 a {
     text-decoration: none;
-}
-
-/* 定義一些通用的 class */
-
-// 容器的直接子節點，以 5px 作爲間距
-.space5>*:not(:last-child) {
-    padding-right: 5px;
-}
-
-.space10>*:not(:last-child) {
-    padding-right: 10px;
 }
