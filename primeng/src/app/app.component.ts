@@ -31,6 +31,9 @@ export class AppComponent implements OnInit {
       this.theme = this.sanitizer.bypassSecurityTrustResourceUrl(`assets/themes/${theme}/theme.css`)
     }
   }
+  isTheme(theme: string) {
+    return this.settingsService.theme.value == theme
+  }
 }
 
 const Themes: Array<{

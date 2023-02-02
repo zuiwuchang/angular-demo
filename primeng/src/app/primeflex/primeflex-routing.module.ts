@@ -22,6 +22,10 @@ const routes: Routes = [
     path: 'border',
     loadChildren: () => import('./border/border.module').then(m => m.BorderModule),
   },
+  {
+    path: 'space',
+    loadChildren: () => import('./space/space.module').then(m => m.SpaceModule),
+  },
 ];
 
 @NgModule({

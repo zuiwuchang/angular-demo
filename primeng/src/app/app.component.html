@@ -56,11 +56,14 @@
     <div class="grid">
       <div *ngFor="let val of theme.values" class="col-3 flex flex-column gap-2">
         <ng-container *ngIf="val.src">
-          <p-button class="flex justify-content-center" styleClass="p-button-link" (onClick)="onClickTheme(val.value)"
-            [ariaLabel]="val.value">
-            <img [src]="val.src" style="width: 58px;">
-          </p-button>
+          <div class="relative">
+            <p-button class="flex justify-content-center" styleClass="p-button-link" (onClick)="onClickTheme(val.value)"
+              [ariaLabel]="val.value">
+              <img [src]="val.src" style="width: 58px;">
+            </p-button>
 
+            <i class="text-primary text-xl pi pi-check-circle absolute top-0 right-0" *ngIf="isTheme(val.value)"></i>
+          </div>
           <div class="flex justify-content-center" style="font-size: 14px;">{{val.label}}</div>
         </ng-container>
       </div>
