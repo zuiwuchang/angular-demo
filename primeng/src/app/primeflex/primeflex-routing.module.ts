@@ -30,6 +30,10 @@ const routes: Routes = [
     path: 'size',
     loadChildren: () => import('./size/size.module').then(m => m.SizeModule),
   },
+  {
+    path: 'typography',
+    loadChildren: () => import('./typography/typography.module').then(m => m.TypographyModule),
+  },
 ];
 
 @NgModule({
