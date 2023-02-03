@@ -37,4 +37,4 @@ do
 done
 
 
-ng build --base-href /
+ng build --base-href /angular/primeflex

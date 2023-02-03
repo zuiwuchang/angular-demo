@@ -26,6 +26,10 @@ const routes: Routes = [
     path: 'space',
     loadChildren: () => import('./space/space.module').then(m => m.SpaceModule),
   },
+  {
+    path: 'size',
+    loadChildren: () => import('./size/size.module').then(m => m.SizeModule),
+  },
 ];
 
 @NgModule({
