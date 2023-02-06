@@ -34,6 +34,26 @@ const routes: Routes = [
     path: 'typography',
     loadChildren: () => import('./typography/typography.module').then(m => m.TypographyModule),
   },
+  {
+    path: 'effects',
+    loadChildren: () => import('./effects/effects.module').then(m => m.EffectsModule),
+  },
+  {
+    path: 'transition',
+    loadChildren: () => import('./transition/transition.module').then(m => m.TransitionModule),
+  },
+  {
+    path: 'animations',
+    loadChildren: () => import('./animations/animations.module').then(m => m.AnimationsModule),
+  },
+  {
+    path: 'transform',
+    loadChildren: () => import('./transform/transform.module').then(m => m.TransformModule),
+  },
+  {
+    path: 'interactivity',
+    loadChildren: () => import('./interactivity/interactivity.module').then(m => m.InteractivityModule),
+  },
 ];
 
 @NgModule({
